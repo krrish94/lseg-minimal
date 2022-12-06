@@ -54,7 +54,7 @@ usage: extract_lseg_features.py [-h] [--checkpoint-path STR|PATH]
 │ -h, --help              show this help message and exit                    │
 │ --checkpoint-path STR|PATH                                                 │
 │                         (default:                                          │
-│                         /home/krishna/code/lseg-minimal/examples/checkpoi… │
+│                         lseg-minimal/examples/checkpoi… │
 │ --backbone STR          (default: clip_vitl16_384)                         │
 │ --num-features INT      (default: 256)                                     │
 │ --arch-option INT       (default: 0)                                       │
@@ -62,7 +62,7 @@ usage: extract_lseg_features.py [-h] [--checkpoint-path STR|PATH]
 │ --activation STR        (default: lrelu)                                   │
 │ --crop-size INT         (default: 480)                                     │
 │ --query-image STR|PATH  (default:                                          │
-│                         /home/krishna/code/lseg-minimal/images/teddybear.… │
+│                         lseg-minimal/images/teddybear.… │
 │ --prompt STR            (default: teddy)                                   │
 ╰────────────────────────────────────────────────────────────────────────────╯
 ```
