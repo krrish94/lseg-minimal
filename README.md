@@ -13,7 +13,7 @@ First, install a recent pytorch release by following instructions on [https://py
 ### Install OpenAI CLIP
 
 Now, install the OpenAI CLIP package by running
-```
+```bash
 pip install git+https://github.com/openai/CLIP.git
 ```
 
@@ -21,7 +21,7 @@ pip install git+https://github.com/openai/CLIP.git
 
 Build the `lseg` package by running
 
-```
+```bash
 python setup.py build develop
 ```
 
@@ -37,14 +37,15 @@ Note: Source images used in the examples are from [Wikimidea](https://commons.wi
 
 ### Example 1: extract_lseg_features.py
 
-```
+```bash
 cd examples
 python extract_lseg_features.py
 ```
 
 Commandline options supported
 
-> usage: extract_lseg_features.py [-h] [--checkpoint-path STR|PATH]
+```
+usage: extract_lseg_features.py [-h] [--checkpoint-path STR|PATH]
                                 [--backbone STR] [--num-features INT]
                                 [--arch-option INT] [--block-depth INT]
                                 [--activation STR] [--crop-size INT]
@@ -64,6 +65,7 @@ Commandline options supported
 │                         /home/krishna/code/lseg-minimal/images/teddybear.… │
 │ --prompt STR            (default: teddy)                                   │
 ╰────────────────────────────────────────────────────────────────────────────╯
+```
 
 This script should produce an output that looks like:
 ![](images/lseg_output_teddybear.png)
