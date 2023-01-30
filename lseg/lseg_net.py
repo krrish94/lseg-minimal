@@ -124,7 +124,7 @@ class LSeg(BaseModel):
         }
 
         # Instantiate backbone and reassemble blocks
-        self.clip_pretrained, self.pretrained, self.scratch = _make_encoder(
+        self.clip_pretrained, self.pretrained, self.scratch, self.clip_preprocess = _make_encoder(
             backbone,
             features,
             groups=1,

@@ -20,7 +20,7 @@ def _make_encoder(
     enable_attention_hooks=False,
 ):
     if backbone == "clip_vitl16_384":
-        clip_pretrained, pretrained = _make_pretrained_clip_vitl16_384(
+        clip_pretrained, pretrained, clip_preprocess = _make_pretrained_clip_vitl16_384(
             use_pretrained,
             hooks=hooks,
             use_readout=use_readout,
@@ -30,7 +30,7 @@ def _make_encoder(
             [256, 512, 1024, 1024], features, groups=groups, expand=expand
         )
     elif backbone == "clipRN50x16_vitl16_384":
-        clip_pretrained, pretrained = _make_pretrained_clipRN50x16_vitl16_384(
+        clip_pretrained, pretrained, clip_preprocess = _make_pretrained_clipRN50x16_vitl16_384(
             use_pretrained,
             hooks=hooks,
             use_readout=use_readout,
@@ -40,7 +40,7 @@ def _make_encoder(
             [256, 512, 1024, 1024], features, groups=groups, expand=expand
         )
     elif backbone == "clip_vitb32_384":
-        clip_pretrained, pretrained = _make_pretrained_clip_vitb32_384(
+        clip_pretrained, pretrained, clip_preprocess = _make_pretrained_clip_vitb32_384(
             use_pretrained,
             hooks=hooks,
             use_readout=use_readout,
@@ -52,7 +52,7 @@ def _make_encoder(
         print(f"Backbone '{backbone}' not implemented")
         assert False
 
-    return clip_pretrained, pretrained, scratch
+    return clip_pretrained, pretrained, scratch, clip_preprocess
 
 
 def _make_scratch(in_shape, out_shape, groups=1, expand=False):
